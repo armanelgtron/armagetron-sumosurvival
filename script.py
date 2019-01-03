@@ -36,7 +36,7 @@ while True:
 		except IndexError:
 			pass
 	if split[0] == "CYCLE_CREATED":
-		print("SPAWN_ZONE fortress "+split[6]+" "+split[2]+" "+split[3]+" 10 0")
+		print("SPAWN_ZONE fortress "+(split[6].replace("\\","\\\\"))+" "+split[2]+" "+split[3]+" 10 0")
 		players.append(split[1])
 	if split[0] == "CYCLE_DESTROYED":
 		players.remove(split[1])
